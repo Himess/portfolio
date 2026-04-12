@@ -26,28 +26,32 @@ export const projects: Project[] = [
     name: "MARC Protocol",
     tagline: "The privacy layer for agent payments",
     summary:
-      "FHE-encrypted tokens, agent identity, and escrow-based commerce for autonomous AI agents. Seven contracts, ten plugins, three ERC standards.",
+      "FHE-encrypted tokens, agent identity, and escrow-based commerce for autonomous AI agents. Eight contracts on Sepolia, ten integration plugins, three ERC standards (7984, 8004, 8183).",
     year: "2026",
-    status: "Audited",
-    stack: ["Solidity", "FHE", "x402", "TypeScript", "Next.js"],
+    status: "Live",
+    stack: ["Solidity", "FHE (fhEVM)", "x402", "MPP", "TypeScript", "Next.js"],
     links: {
-      repo: "https://github.com/Himess/fhe-x402",
+      repo: "https://github.com/marc-protocol/marc",
+      site: "https://marcprotocol.com",
+      docs: "https://docs.marcprotocol.com",
+      video: "https://www.youtube.com/watch?v=utipPnFrzOY",
     },
     featured: true,
     award: "Zama Mainnet Season 1 — Builder Track Winner",
     highlights: [
       "Zama Mainnet Season 1 — Builder Track winner",
-      "879 tests, deep-audited",
-      "FHE-encrypted balances via Zama fhEVM",
-      "x402 payment rails for agent commerce",
-      "Escrow, streaming, stealth addresses",
+      "1,100+ tests, deep-audited, CI green",
+      "ERC-7984 confidential token (FHE-encrypted cUSDC)",
+      "ERC-8004 agent identity + reputation",
+      "ERC-8183 FHE escrow with encrypted budgets",
+      "Ten plugins: x402, MPP, MCP, A2A, AgentKit, Virtuals, OpenClaw, ElizaOS, LangChain, CrewAI",
     ],
     problem:
       "Autonomous AI agents transacting on-chain leak their entire spending history. Existing payment rails expose balance, counterparties, and intent to any observer — which breaks competitive agents, private treasuries, and confidential B2B flows.",
     approach:
-      "MARC introduces a privacy layer on top of x402 using fully homomorphic encryption. Balances, transfer amounts, and agent identities are encrypted at rest; escrow, streaming, and stealth-address primitives are composed as plugins. Three ERC standards anchor interop — one for agent identity, one for confidential transfers, one for encrypted escrow.",
+      "MARC is a protocol-agnostic privacy layer on top of x402 and MPP, powered by fully homomorphic encryption. Balances, transfer amounts, and agent identities stay encrypted at rest; escrow, identity, and reputation primitives compose as plugins. Single-TX payments via Zama's operator pattern. Three ERC standards anchor interop: ERC-7984 for confidential tokens, ERC-8004 for agent identity, ERC-8183 for encrypted escrow with hook callbacks.",
     outcome:
-      "Winner of the Zama Mainnet Season 1 Builder Track. Seven production contracts with 879 passing tests and a deep security audit. Ten plugins cover the common commerce flows an agent runs — one-shot payment, subscription, streaming, escrow release, dispute resolution.",
+      "Winner of the Zama Mainnet Season 1 Builder Track. Eight production contracts live on Sepolia with 1,100+ passing tests. Landing, app, and docs deployed at marcprotocol.com. Fee-based revenue model — no token, protocol stays credibly neutral.",
   },
   {
     slug: "mixvm",
