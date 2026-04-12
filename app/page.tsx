@@ -1,65 +1,96 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Mail } from "lucide-react";
+import Fade from "@/components/fade";
+import ProjectCard from "@/components/project-card";
+import { featuredProjects } from "@/lib/projects";
+import { profile } from "@/lib/profile";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
+      <Fade as="section" className="flex items-start gap-6">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src={profile.avatar}
+          alt={profile.name}
+          width={72}
+          height={72}
+          className="h-16 w-16 rounded-full border border-[var(--border)]"
           priority
+          unoptimized
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="flex-1">
+          <h1 className="text-xl font-medium text-[var(--foreground)]">
+            {profile.name}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-1 text-sm text-[var(--muted)]">
+            {profile.role}. Based in {profile.location}.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </Fade>
+
+      <Fade as="section" delay={0.08} className="mt-10 max-w-xl">
+        <p className="text-[15px] leading-relaxed text-[var(--foreground)]">
+          {profile.bio}
+        </p>
+        <p className="mt-4 text-[15px] leading-relaxed text-[var(--muted)]">
+          {profile.longBio}
+        </p>
+      </Fade>
+
+      <Fade as="section" delay={0.16} className="mt-6 flex flex-wrap gap-4 text-sm">
+        <a
+          href={profile.links.github}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+        >
+          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.77 1.06.77 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+          </svg>
+          <span className="link-underline">GitHub</span>
+        </a>
+        <a
+          href={profile.links.twitter}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+        >
+          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span className="link-underline">@Himess__</span>
+        </a>
+        <a
+          href={profile.links.email}
+          className="inline-flex items-center gap-1.5 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+        >
+          <Mail className="h-3.5 w-3.5" strokeWidth={1.5} />
+          <span className="link-underline">{profile.email}</span>
+        </a>
+      </Fade>
+
+      <Fade as="section" delay={0.24} className="mt-20">
+        <div className="flex items-baseline justify-between">
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+            Featured Work
+          </h2>
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-1 text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            All projects
+            <ArrowRight className="h-3 w-3" strokeWidth={1.5} />
+          </Link>
         </div>
-      </main>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {featuredProjects.map((project, i) => (
+            <Fade key={project.slug} delay={0.28 + i * 0.04}>
+              <ProjectCard project={project} />
+            </Fade>
+          ))}
+        </div>
+      </Fade>
     </div>
   );
 }
