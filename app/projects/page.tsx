@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             {allProjects.length} projects, one thesis.
           </h1>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-[var(--muted)]">
-            Privacy and payments belong in the same layer. These are the systems where I've pushed that idea into production.
+            Privacy and payments belong in the same layer. These are the systems where I have pushed that idea into production.
           </p>
         </header>
       </Fade>

@@ -35,7 +35,7 @@ export default function AboutPage() {
         <p>{profile.bio}</p>
         <p className="text-[var(--muted)]">{profile.longBio}</p>
         <p className="text-[var(--muted)]">
-          I have shipped cross-chain privacy pools, FHE prediction markets, agent-payment protocols, and a treasury app on Canton. Most of that work lives on the Projects page — with the problem, the approach, and the outcome for each.
+          I have shipped cross-chain privacy pools, FHE prediction markets, agent-payment protocols, and a treasury app on Canton. Most of that work lives on the Projects page, with the problem, the approach, and the outcome for each.
         </p>
       </Fade>
 

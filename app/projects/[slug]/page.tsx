@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }: Params) {
             <ul className="mt-3 space-y-1.5 text-sm text-[var(--foreground)]">
               {project.highlights.map((h) => (
                 <li key={h} className="flex gap-2">
-                  <span className="text-[var(--muted)]">—</span>
+                  <span className="text-[var(--muted)]">·</span>
                   <span>{h}</span>
                 </li>
               ))}
