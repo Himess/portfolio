@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Trophy } from "lucide-react";
 import Fade from "@/components/fade";
 import { getProject, projects } from "@/lib/projects";
 
@@ -56,6 +56,15 @@ export default async function ProjectPage({ params }: Params) {
             {project.name}
           </h1>
           <p className="mt-2 text-lg text-[var(--muted)]">{project.tagline}</p>
+
+          {project.award && (
+            <div className="mt-5 inline-flex items-center gap-2 border border-amber-500/30 bg-amber-500/5 px-3 py-1.5">
+              <Trophy className="h-3.5 w-3.5 text-amber-400" strokeWidth={1.5} />
+              <span className="font-mono text-[11px] uppercase tracking-wider text-amber-300">
+                {project.award}
+              </span>
+            </div>
+          )}
 
           <div className="mt-6 flex flex-wrap gap-3">
             {project.links.site && (

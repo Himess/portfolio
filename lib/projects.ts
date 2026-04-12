@@ -13,6 +13,7 @@ export type Project = {
     docs?: string;
   };
   featured: boolean;
+  award?: string;
   highlights: string[];
   problem: string;
   approach: string;
@@ -33,7 +34,9 @@ export const projects: Project[] = [
       repo: "https://github.com/Himess/fhe-x402",
     },
     featured: true,
+    award: "Zama Mainnet Season 1 — Builder Track Winner",
     highlights: [
+      "Zama Mainnet Season 1 — Builder Track winner",
       "879 tests, deep-audited",
       "FHE-encrypted balances via Zama fhEVM",
       "x402 payment rails for agent commerce",
@@ -44,7 +47,7 @@ export const projects: Project[] = [
     approach:
       "MARC introduces a privacy layer on top of x402 using fully homomorphic encryption. Balances, transfer amounts, and agent identities are encrypted at rest; escrow, streaming, and stealth-address primitives are composed as plugins. Three ERC standards anchor interop — one for agent identity, one for confidential transfers, one for encrypted escrow.",
     outcome:
-      "Seven production contracts with 879 passing tests and a deep security audit. Ten plugins cover the common commerce flows an agent runs — one-shot payment, subscription, streaming, escrow release, dispute resolution.",
+      "Winner of the Zama Mainnet Season 1 Builder Track. Seven production contracts with 879 passing tests and a deep security audit. Ten plugins cover the common commerce flows an agent runs — one-shot payment, subscription, streaming, escrow release, dispute resolution.",
   },
   {
     slug: "mixvm",
@@ -142,6 +145,7 @@ export const projects: Project[] = [
       repo: "https://github.com/Himess/Pendex",
     },
     featured: true,
+    award: "Zama Developer Program — Winner",
     highlights: [
       "Zama Developer Program winner",
       "FHE-encrypted order book",

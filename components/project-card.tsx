@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Trophy } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -25,6 +25,14 @@ export default function ProjectCard({ project }: { project: Project }) {
           strokeWidth={1.5}
         />
       </div>
+      {project.award && (
+        <div className="mt-3 inline-flex items-center gap-1.5 border border-amber-500/30 bg-amber-500/5 px-2 py-1">
+          <Trophy className="h-3 w-3 text-amber-400" strokeWidth={1.5} />
+          <span className="font-mono text-[10px] uppercase tracking-wider text-amber-300">
+            {project.award}
+          </span>
+        </div>
+      )}
       <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
         {project.summary}
       </p>
