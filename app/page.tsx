@@ -8,7 +8,7 @@ import { profile } from "@/lib/profile";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
+    <div className="mx-auto w-full max-w-5xl px-6 py-16 sm:py-24">
       <Fade as="section" className="flex items-start gap-6">
         <Image
           src={profile.avatar}
@@ -83,7 +83,7 @@ export default function Home() {
             <ArrowRight className="h-3 w-3" strokeWidth={1.5} />
           </Link>
         </div>
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project, i) => (
             <Fade key={project.slug} delay={0.28 + i * 0.04}>
               <ProjectCard project={project} />

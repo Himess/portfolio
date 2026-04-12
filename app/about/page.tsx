@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-20">
+    <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20">
       <Fade as="section" className="flex items-start gap-6">
         <Image
           src={profile.avatar}

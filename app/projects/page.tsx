@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-20">
+    <div className="mx-auto w-full max-w-5xl px-6 py-16 sm:py-20">
       <Fade>
         <header>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
         </header>
       </Fade>
 
-      <Fade delay={0.08} className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <Fade delay={0.08} className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {allProjects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}

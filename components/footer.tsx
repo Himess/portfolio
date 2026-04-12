@@ -3,7 +3,7 @@ import { profile } from "@/lib/profile";
 export default function Footer() {
   return (
     <footer className="border-t border-[var(--border)] mt-24">
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-6 py-10 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6 py-10 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
         <p>
           &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>

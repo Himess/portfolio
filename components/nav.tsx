@@ -10,7 +10,7 @@ const items = [
 export default function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
           className="font-mono text-sm tracking-tight text-[var(--foreground)] hover:text-[var(--muted)] transition-colors"

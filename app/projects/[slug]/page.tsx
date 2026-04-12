@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }: Params) {
   if (!project) notFound();
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-20">
+    <article className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20">
       <Fade>
         <Link
           href="/projects"
