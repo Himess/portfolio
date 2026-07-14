@@ -22,6 +22,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "ghostlend",
+    name: "GhostLend",
+    tagline: "Confidential lending & leverage, computed on ciphertext",
+    summary:
+      "Borrow, leverage, and net lending positions with the amounts, the debt, and even the leverage ratio encrypted end-to-end. Built on Zama FHEVM, live on Sepolia — no plaintext position ever touches the chain.",
+    year: "2026",
+    status: "Live",
+    stack: ["Solidity", "FHE (fhEVM)", "ERC-7984", "Chainlink", "TypeScript", "Next.js"],
+    links: {
+      repo: "https://github.com/Himess/ghostlend",
+      site: "https://ghostlend.vercel.app",
+      docs: "https://ghostlend-deck.vercel.app",
+    },
+    featured: true,
+    highlights: [
+      "7 verified contracts on Sepolia, 91% coverage (core 97%)",
+      "Confidential borrow against shielded collateral",
+      "Encrypted leverage — even the leverage ratio stays hidden",
+      "Liquidation that reveals a single bit (healthy / not)",
+      "GhostGate netting — only the batch net crosses the public boundary",
+      "Built on open ERC-7984 confidential-token primitives",
+    ],
+    problem:
+      "Every lending position opened on-chain is a public broadcast: size, debt, liquidation price, and leverage are all readable by anyone with an RPC endpoint. The supply side of confidential DeFi already exists — shield a deposit, earn encrypted yield — but the moment you borrow against it, you go completely naked. The credit half of the stack was missing.",
+    approach:
+      "GhostLend is that credit layer, computed entirely on ciphertext. Balances, debt, and health factors live as FHE-encrypted values under Zama's Protocol; the pool runs borrow, repay, and an encrypted margin check without ever decrypting a position. Leverage loops a confidential collateral position so the ratio itself stays private. Liquidation reveals exactly one bit — healthy or not — through a single gated decryption, never the underlying numbers. A GhostGate netting gateway batches deposit and withdraw intents so only the net movement crosses to the public vault.",
+    outcome:
+      "Live on Sepolia across seven verified contracts at 91% coverage (97% on the core pool), with a working demo and a pitch deck. Demonstrates that the one primitive on-chain lending never hid — your position — can run end-to-end encrypted while liquidation and solvency stay publicly verifiable.",
+  },
+  {
     slug: "marc",
     name: "MARC Protocol",
     tagline: "The privacy layer for agent payments",
