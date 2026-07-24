@@ -272,6 +272,8 @@ export const projects: Project[] = [
     stack: ["Solidity", "fhEVM", "FHE", "TypeScript"],
     links: {
       repo: "https://github.com/Himess/sealtender",
+      site: "https://sealtender.vercel.app",
+      docs: "https://sealtender.vercel.app/slides.html",
       video: "https://www.youtube.com/watch?v=dfQuYuebii4",
     },
     featured: false,

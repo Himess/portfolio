@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }: Params) {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 border border-[var(--border)] px-3 py-1.5 text-xs text-[var(--foreground)] hover:border-[var(--accent)] transition-colors"
               >
-                {project.links.docs.includes("deck") ? "Deck" : "Docs"}
+                {/deck|slides/.test(project.links.docs) ? "Deck" : "Docs"}
                 <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
               </a>
             )}
