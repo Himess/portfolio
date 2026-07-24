@@ -35,6 +35,7 @@ export const projects: Project[] = [
       repo: "https://github.com/Himess/ghostlend",
       site: "https://ghostlend.vercel.app",
       docs: "https://ghostlend-deck.vercel.app",
+      video: "https://www.youtube.com/watch?v=Rz0Mgozh0Xc",
     },
     featured: true,
     award: "Zama Developer Program — Builder Track Winner",
@@ -55,6 +56,37 @@ export const projects: Project[] = [
       "GhostLend is that credit layer, computed entirely on ciphertext. Balances, debt, and health factors live as FHE-encrypted values under Zama's Protocol; the pool runs borrow, repay, and an encrypted margin check without ever decrypting a position. Leverage loops a confidential collateral position so the ratio itself stays private. Liquidation reveals exactly one bit — healthy or not — through a single gated decryption, never the underlying numbers. A GhostGate netting gateway batches deposit and withdraw intents so only the net movement crosses to the public vault.",
     outcome:
       "Live on Sepolia across seven verified contracts at 91% coverage (97% on the core pool), with a working demo and a pitch deck. Demonstrates that the one primitive on-chain lending never hid — your position — can run end-to-end encrypted while liquidation and solvency stay publicly verifiable.",
+  },
+  {
+    slug: "ghostrail",
+    name: "GhostRail",
+    tagline: "Confidential lending on Circle's Arc",
+    summary:
+      "A confidential lending layer for Arc: supply into public Morpho/Aave-style venues across USDC, ETH, BTC, EURC, and tokenized treasury while keeping your position private — only the net of each batch ever touches the public venue. Plain Solidity, USDC-native, live on Arc testnet, architected for Arc's TEE Privacy Sector.",
+    year: "2026",
+    status: "Live",
+    stack: ["Solidity", "Arc", "Circle CCTP", "USDC", "x402", "TypeScript"],
+    links: {
+      repo: "https://github.com/Himess/ghostrail",
+      site: "https://ghostrail.xyz",
+      docs: "https://ghostrail-deck.vercel.app",
+      video: "https://www.youtube.com/watch?v=EIdetHzyqWs",
+    },
+    featured: true,
+    highlights: [
+      "Live on Arc testnet, USDC-native, plain Solidity",
+      "Batch netting — only the net of each batch crosses the public venue",
+      "Multi-asset markets: USDC, ETH, BTC, EURC, tokenized treasury",
+      "Real Circle rails: USDC + CCTP bridge (Base/Ethereum/Arbitrum → Arc) + EURC market",
+      "Confidential x402 / agent-payments module alongside",
+      "Architected for Arc's TEE Privacy Sector — confidentiality activates when APS ships",
+    ],
+    problem:
+      "Public lending venues broadcast every position: size, collateral, health factor, liquidation price. Supplying into Morpho/Aave-style markets on a public chain means your whole book is readable by anyone. Arc introduces a TEE privacy sector, but nothing yet lets a lender earn venue yield while keeping the position itself private.",
+    approach:
+      "GhostRail is a confidential lending layer on Arc. Positions live behind a confidential boundary and a netting gateway batches intents so only the net of each batch is ever posted to the underlying public venue. It integrates real Circle rails — Arc-testnet USDC, a CCTP bridge (burn→attestation→mint from Base/Ethereum/Arbitrum Sepolia), and an EURC market — across USDC, ETH, BTC, EURC, and tokenized-treasury markets, with a confidential x402 / agent-payments module alongside. It is honest by design about Arc testnet: protocol logic and Circle integrations are live, while the confidentiality is notional until Arc's TEE Privacy Sector (APS) activates.",
+    outcome:
+      "Live on Arc testnet with real USDC, a working CCTP bridge, and an EURC market, plus a landing site, deck, and demo. Applies proven confidential-DeFi patterns — netting, the two-speed public boundary, honest boundary tables — to Arc's TEE substrate, ready for confidentiality to switch on when APS ships.",
   },
   {
     slug: "marc",
@@ -157,6 +189,7 @@ export const projects: Project[] = [
     links: {
       repo: "https://github.com/Himess/privagent",
       site: "https://privagent.vercel.app",
+      video: "https://www.youtube.com/watch?v=02f8n-92c74",
     },
     featured: true,
     highlights: [
@@ -184,6 +217,7 @@ export const projects: Project[] = [
     links: {
       repo: "https://github.com/Himess/Pendex",
       site: "https://pendex.vercel.app",
+      video: "https://www.youtube.com/watch?v=6oEpE62Udng",
     },
     featured: true,
     award: "Zama Developer Program — Builder Track Winner",
@@ -238,6 +272,7 @@ export const projects: Project[] = [
     stack: ["Solidity", "fhEVM", "FHE", "TypeScript"],
     links: {
       repo: "https://github.com/Himess/sealtender",
+      video: "https://www.youtube.com/watch?v=dfQuYuebii4",
     },
     featured: false,
     highlights: [

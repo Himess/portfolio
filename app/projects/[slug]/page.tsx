@@ -114,6 +114,17 @@ export default async function ProjectPage({ params }: Params) {
                 <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
               </a>
             )}
+            {project.links.docs && (
+              <a
+                href={project.links.docs}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 border border-[var(--border)] px-3 py-1.5 text-xs text-[var(--foreground)] hover:border-[var(--accent)] transition-colors"
+              >
+                {project.links.docs.includes("deck") ? "Deck" : "Docs"}
+                <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
+              </a>
+            )}
           </div>
         </header>
       </Fade>
