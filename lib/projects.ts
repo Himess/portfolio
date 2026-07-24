@@ -14,6 +14,7 @@ export type Project = {
   };
   featured: boolean;
   award?: string;
+  awardLink?: string;
   highlights: string[];
   problem: string;
   approach: string;
@@ -36,7 +37,11 @@ export const projects: Project[] = [
       docs: "https://ghostlend-deck.vercel.app",
     },
     featured: true,
+    award: "Zama Developer Program S3 — Builder Track Winner, 2nd place",
+    awardLink:
+      "https://www.zama.org/post/announcing-the-developer-program-mainnet-season-3-winners",
     highlights: [
+      "Zama Developer Program Mainnet Season 3 — Builder Track Winner, 2nd place",
       "7 verified contracts on Sepolia, 91% coverage (core 97%)",
       "Confidential borrow against shielded collateral",
       "Encrypted leverage — even the leverage ratio stays hidden",
@@ -68,6 +73,7 @@ export const projects: Project[] = [
     },
     featured: true,
     award: "Zama Mainnet Season 1 Builder Track Winner",
+    awardLink: "https://x.com/zama/status/2037196963163046327",
     highlights: [
       "Zama Mainnet Season 1 Builder Track winner",
       "1,100+ tests, deep-audited, CI green",

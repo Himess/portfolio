@@ -57,14 +57,28 @@ export default async function ProjectPage({ params }: Params) {
           </h1>
           <p className="mt-2 text-lg text-[var(--muted)]">{project.tagline}</p>
 
-          {project.award && (
-            <div className="mt-5 inline-flex items-center gap-2 border border-amber-500/30 bg-amber-500/5 px-3 py-1.5">
-              <Trophy className="h-3.5 w-3.5 text-amber-400" strokeWidth={1.5} />
-              <span className="font-mono text-[11px] uppercase tracking-wider text-amber-300">
-                {project.award}
-              </span>
-            </div>
-          )}
+          {project.award &&
+            (project.awardLink ? (
+              <a
+                href={project.awardLink}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-2 border border-amber-500/30 bg-amber-500/5 px-3 py-1.5 transition-colors hover:border-amber-500/60"
+              >
+                <Trophy className="h-3.5 w-3.5 text-amber-400" strokeWidth={1.5} />
+                <span className="font-mono text-[11px] uppercase tracking-wider text-amber-300">
+                  {project.award}
+                </span>
+                <ArrowUpRight className="h-3 w-3 text-amber-400" strokeWidth={1.5} />
+              </a>
+            ) : (
+              <div className="mt-5 inline-flex items-center gap-2 border border-amber-500/30 bg-amber-500/5 px-3 py-1.5">
+                <Trophy className="h-3.5 w-3.5 text-amber-400" strokeWidth={1.5} />
+                <span className="font-mono text-[11px] uppercase tracking-wider text-amber-300">
+                  {project.award}
+                </span>
+              </div>
+            ))}
 
           <div className="mt-6 flex flex-wrap gap-3">
             {project.links.site && (
