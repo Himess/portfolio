@@ -37,7 +37,7 @@ export const projects: Project[] = [
       docs: "https://ghostlend-deck.vercel.app",
     },
     featured: true,
-    award: "Zama Developer Program S3 — Builder Track Winner, 2nd place",
+    award: "Zama Developer Program — Builder Track Winner",
     awardLink:
       "https://www.zama.org/post/announcing-the-developer-program-mainnet-season-3-winners",
     highlights: [
@@ -72,7 +72,7 @@ export const projects: Project[] = [
       video: "https://www.youtube.com/watch?v=utipPnFrzOY",
     },
     featured: true,
-    award: "Zama Mainnet Season 1 Builder Track Winner",
+    award: "Zama Developer Program — Builder Track Winner",
     awardLink: "https://x.com/zama/status/2037196963163046327",
     highlights: [
       "Zama Mainnet Season 1 Builder Track winner",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
       site: "https://pendex.vercel.app",
     },
     featured: true,
-    award: "Zama Developer Program Winner",
+    award: "Zama Developer Program — Builder Track Winner",
     highlights: [
       "Zama Developer Program December 2025 winner",
       "FHE-encrypted order book",
