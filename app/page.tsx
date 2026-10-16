@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import Fade from "@/components/fade";
 import ProjectCard from "@/components/project-card";
-import RecentWins from "@/components/recent-wins";
 import { featuredProjects } from "@/lib/projects";
 import { profile } from "@/lib/profile";
 
@@ -71,11 +70,7 @@ export default function Home() {
         </a>
       </Fade>
 
-      <Fade delay={0.20} className="mt-14">
-        <RecentWins />
-      </Fade>
-
-      <Fade as="section" delay={0.24} className="mt-16">
+      <Fade as="section" delay={0.24} className="mt-20">
         <div className="flex items-baseline justify-between">
           <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
             Featured Work

@@ -15,11 +15,6 @@ export type Project = {
   featured: boolean;
   award?: string;
   awardLink?: string;
-  recognition?: {
-    result: string;
-    date: string;
-    note: string;
-  };
   highlights: string[];
   problem: string;
   approach: string;
@@ -45,11 +40,6 @@ export const projects: Project[] = [
     featured: true,
     award: "Binance Agent OS Mini Hackathon — 1st Place, Track A",
     awardLink: "https://x.com/binance/status/2109750966077563122",
-    recognition: {
-      result: "1st place · Track A",
-      date: "October 2026",
-      note: "Binance Agent OS Mini Hackathon",
-    },
     highlights: [
       "1st place — Binance Agent OS Mini Hackathon, Track A",
       "Five MCP tools over stdio and Streamable HTTP, plus a live web app",
@@ -70,7 +60,7 @@ export const projects: Project[] = [
     name: "SaveTogether",
     tagline: "Confidential prize savings with encrypted odds and results",
     summary:
-      "Zama Developer Program Mainnet Season 4 winner. Turns confidential vault yield into prizes while keeping balances, winning odds, and individual results encrypted. Principal is not used to fund prizes.",
+      "1st place in the Zama Developer Program Mainnet Season 4. Turns confidential vault yield into prizes while keeping balances, winning odds, and individual results encrypted. Principal is not used to fund prizes.",
     year: "2026",
     status: "Live",
     stack: ["Solidity", "Zama FHEVM", "FHE", "TypeScript"],
@@ -80,15 +70,10 @@ export const projects: Project[] = [
       docs: "https://savetogether-deck.vercel.app",
     },
     featured: true,
-    award: "Zama Developer Program — Mainnet Season 4 Winner",
+    award: "Zama Developer Program — 1st Place, Mainnet Season 4",
     awardLink: "https://x.com/dcjanio/status/2102048288157417538",
-    recognition: {
-      result: "Season 4 Winner",
-      date: "September 2026",
-      note: "Zama Developer Program · Mainnet",
-    },
     highlights: [
-      "One of three winning projects in Zama Developer Program Mainnet Season 4",
+      "1st place — Zama Developer Program Mainnet Season 4",
       "Confidential prize savings built on Zama FHEVM",
       "Balances, winning odds, and individual draw results remain encrypted",
       "Draw weights account for both deposit size and holding time",
@@ -100,7 +85,7 @@ export const projects: Project[] = [
     approach:
       "SaveTogether composes with Zama's confidential vault design and changes how yield is distributed. Instead of paying each depositor a proportional share, it pools the yield for a draw weighted by deposit size and holding time. Zama FHEVM keeps balances, odds, and individual results encrypted through the draw. Prizes are funded from yield while principal remains separate and withdrawable under the protocol's rules.",
     outcome:
-      "Selected as one of three winning projects in the Zama Developer Program Mainnet Season 4. A working Sepolia application, public Solidity and TypeScript source, and a pitch deck demonstrate confidential prize savings with privacy extending to the odds and the result.",
+      "Awarded 1st place in the Zama Developer Program Mainnet Season 4. A working Sepolia application, public Solidity and TypeScript source, and a pitch deck demonstrate confidential prize savings with privacy extending to the odds and the result.",
   },
   {
     slug: "ghostlend",

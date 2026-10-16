@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Fade from "@/components/fade";
-import RecentWins from "@/components/recent-wins";
 import { profile } from "@/lib/profile";
 
 export const metadata: Metadata = {
@@ -38,10 +37,6 @@ export default function AboutPage() {
         <p className="text-[var(--muted)]">
           I have shipped cross-chain privacy pools, FHE prediction markets, agent-payment protocols, and a treasury app on Canton. Most of that work lives on the Projects page, with the problem, the approach, and the outcome for each.
         </p>
-      </Fade>
-
-      <Fade delay={0.12} className="mt-14">
-        <RecentWins />
       </Fade>
 
       <Fade as="section" delay={0.16} className="mt-16">
