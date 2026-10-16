@@ -15,6 +15,11 @@ export type Project = {
   featured: boolean;
   award?: string;
   awardLink?: string;
+  recognition?: {
+    result: string;
+    date: string;
+    note: string;
+  };
   highlights: string[];
   problem: string;
   approach: string;
@@ -22,6 +27,81 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "portfolio-weight-agent",
+    name: "Portfolio Weight Agent",
+    tagline: "Portfolio rebalancing with judgment and human approval",
+    summary:
+      "1st place in the Binance Agent OS Mini Hackathon, Track A. An AI agent that evaluates portfolio drift, proposes precise trades, and knows when to wait. Deterministic math; human-approved execution.",
+    year: "2026",
+    status: "Live",
+    stack: ["TypeScript", "MCP", "Binance Agent OS", "AI Agents"],
+    links: {
+      repo: "https://github.com/Himess/portfolio-weight-agent",
+      site: "https://portfolio-weight-agent.vercel.app",
+      docs: "https://portfolio-weight-agent.vercel.app/deck.html",
+      video: "https://x.com/Himess__/status/2097447601033355356",
+    },
+    featured: true,
+    award: "Binance Agent OS Mini Hackathon — 1st Place, Track A",
+    awardLink: "https://x.com/binance/status/2109750966077563122",
+    recognition: {
+      result: "1st place · Track A",
+      date: "October 2026",
+      note: "Binance Agent OS Mini Hackathon",
+    },
+    highlights: [
+      "1st place — Binance Agent OS Mini Hackathon, Track A",
+      "Five MCP tools over stdio and Streamable HTTP, plus a live web app",
+      "Deterministic TypeScript computes every quantity, price, and percentage",
+      "Judgment at the asset level: rebalance, partially rebalance, or hold",
+      "Live Binance prices and order-book depth through public endpoints",
+      "Orders go through Binance MCP only after the user's approval",
+    ],
+    problem:
+      "Portfolios drift as markets move. Rebalancing often means selling an asset that is rising and buying one that is falling — a decision people postpone. A threshold bot corrects every breach, even when waiting on a particular asset may be the better choice.",
+    approach:
+      "One engine powers an MCP server and a web app. Deterministic TypeScript computes portfolio value, drift, tolerance bands, and executable trade candidates from live Binance market data. The model chooses among those candidates and explains its decision; it cannot invent quantities or prices. It can act on one asset and hold another in the same review. Execution is delegated to Binance's MCP server with explicit user approval; this agent holds no trading credentials and never places an order itself.",
+    outcome:
+      "Awarded 1st place in Track A of the Binance Agent OS Mini Hackathon. The live app and MCP server make the same decision engine available in a browser or an agent client, with a public repository, demo, and decision history for inspection.",
+  },
+  {
+    slug: "savetogether",
+    name: "SaveTogether",
+    tagline: "Confidential prize savings with encrypted odds and results",
+    summary:
+      "Zama Developer Program Mainnet Season 4 winner. Turns confidential vault yield into prizes while keeping balances, winning odds, and individual results encrypted. Principal is not used to fund prizes.",
+    year: "2026",
+    status: "Live",
+    stack: ["Solidity", "Zama FHEVM", "FHE", "TypeScript"],
+    links: {
+      repo: "https://github.com/Himess/savetogether",
+      site: "https://savetogether-fhe.vercel.app",
+      docs: "https://savetogether-deck.vercel.app",
+    },
+    featured: true,
+    award: "Zama Developer Program — Mainnet Season 4 Winner",
+    awardLink: "https://x.com/dcjanio/status/2102048288157417538",
+    recognition: {
+      result: "Season 4 Winner",
+      date: "September 2026",
+      note: "Zama Developer Program · Mainnet",
+    },
+    highlights: [
+      "One of three winning projects in Zama Developer Program Mainnet Season 4",
+      "Confidential prize savings built on Zama FHEVM",
+      "Balances, winning odds, and individual draw results remain encrypted",
+      "Draw weights account for both deposit size and holding time",
+      "Prizes come from pooled vault yield, not depositors' principal",
+      "Live Sepolia demo, public source, and a dedicated pitch deck",
+    ],
+    problem:
+      "A public prize savings pool exposes how much each participant holds, their odds, and who won. Confidential vaults already hide balances and yield, but distributing that yield through a prize draw introduces two additional secrets: the winner and each participant's chance of winning.",
+    approach:
+      "SaveTogether composes with Zama's confidential vault design and changes how yield is distributed. Instead of paying each depositor a proportional share, it pools the yield for a draw weighted by deposit size and holding time. Zama FHEVM keeps balances, odds, and individual results encrypted through the draw. Prizes are funded from yield while principal remains separate and withdrawable under the protocol's rules.",
+    outcome:
+      "Selected as one of three winning projects in the Zama Developer Program Mainnet Season 4. A working Sepolia application, public Solidity and TypeScript source, and a pitch deck demonstrate confidential prize savings with privacy extending to the odds and the result.",
+  },
   {
     slug: "ghostlend",
     name: "GhostLend",
